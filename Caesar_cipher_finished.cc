@@ -52,7 +52,7 @@ string& cipher(string &text, const char (&alphabet)[26]) {
 				}
 			}
 			alphaindex++;
-			cout << "Can you see this increment?" << endl;
+			
 		}
 	}
 	return text;
