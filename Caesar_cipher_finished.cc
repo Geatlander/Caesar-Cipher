@@ -21,12 +21,13 @@ using std::toupper;
 
 
 string& cipher(string &text, const char (&alphabet)[26]) {
-
+	// Set secret_key to whatever you want here
+	// It may only work with values of -26 to 26
 	const int secret_key = 12;
 	for(char &x : text) {
 		
 		int alphaindex = 0;
-		//cout << "setting alphaindex to zero" << endl;
+
 		
 		for(char y : alphabet) {
 
@@ -38,7 +39,7 @@ string& cipher(string &text, const char (&alphabet)[26]) {
 
 				if((alphaindex) + secret_key > 25) {
 					alphaindex = ((alphaindex)+secret_key)-26;
-					//cout << "setting alphaindex to zero" << endl;
+
 					x = alphabet[(alphaindex)];
 					break;
 
